@@ -17,10 +17,35 @@ const router = createRouter({
           component: () => import('../views/indexPage/index.vue')
         },
         {
-          path: '/about',
-          name: 'about',
-          component: () => import('../views/AboutView.vue')
-        }
+          path: '/vue2',
+          name: 'vue2',
+          component: () => import('@/views/vue/vue2/index.vue')
+        },
+        {
+          path: '/vue3',
+          name: 'vue3',
+          component: () => import('@/views/vue/vue3/index.vue')
+        },
+        {
+          path: '/react',
+          name: 'react',
+          component: () => import('@/views/react/index.vue')
+        },
+        {
+          path: '/tools',
+          name: 'tools',
+          component: () => import('@/views/tools/index.vue')
+        },
+        {
+          path: '/three',
+          name: '3D',
+          component: () => import('@/views/3DModel/index.vue')
+        },
+        // {
+        //   path: '/about',
+        //   name: 'about',
+        //   component: () => import('../views/AboutView.vue')
+        // }
       ]
     },
     {

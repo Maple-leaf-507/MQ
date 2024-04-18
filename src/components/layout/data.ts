@@ -1,9 +1,9 @@
 export const list = [
-    {
-        id:1,
-        title:'基本信息',
-        path:'/'
-    },
+    // {
+    //     id:1,
+    //     title:'基本信息',
+    //     path:'/'
+    // },
     {
         id:2,
         title:'首页',
@@ -38,6 +38,13 @@ export const list = [
     {
         id:6,
         title:'其它',
-        path:'/other'
+        // path:'/other',
+        children:[
+            {
+                id:61,
+                title:'3D',
+                path:'/three'
+            }
+        ]
     }
 ]

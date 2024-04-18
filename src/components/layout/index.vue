@@ -38,9 +38,9 @@
     </div>
     <div style="margin-top:50px;margin-left: 30px;">
       <div v-for="item in list">
-        <div>{{ item.title }}</div>
+        <div @click="jump(item)" :class="routeIndex === item.id?'active':''">{{ item.title }}</div>
         <div v-if="item.children" style="margin-left:20px;">
-          <div v-for="i in item.children" >
+          <div v-for="i in item.children" @click="jump(i)" :class="routeIndex === i.id?'active':''">
             {{ i.title }}
           </div>
         </div>
@@ -54,8 +54,27 @@
 <script lang="ts" setup>
   import { ref } from 'vue'
   import { list } from './data'
+  import { useRouter,useRoute } from "vue-router";
 
   let showModal = ref(false)
+  const router = useRouter()
+  const route = useRoute()
+  const routeIndex = ref(2)
+
+  list.forEach(item => {
+    if(item.children && item.children.length>0){
+      item.children.forEach(i => {
+        if(i.path === route.path){
+          routeIndex.value = i.id
+        }
+      })
+    }else{
+      if(item.path === route.path){
+        routeIndex.value = item.id
+      }
+    }
+  })
+
 
   function clickLeft() {
     showModal.value = !showModal.value
@@ -63,6 +82,12 @@
 
   function closeModal() {
     showModal.value = false
+  }
+
+  function jump(item:any) {
+    if(item.children && item.children.length>0) return
+    router.push(item.path)
+    routeIndex.value = item.id
   }
 </script>
 
