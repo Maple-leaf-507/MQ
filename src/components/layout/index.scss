@@ -1,0 +1,84 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    .top,.bottom{
+      display: flex;
+      padding: 10px 30px;
+      height: 80px;
+      background-color: rgba($color: #cecece, $alpha: 0.9);
+      color: rgb(46, 46, 46);
+    }
+    
+    .top{
+      justify-content: space-between;
+    }
+
+    .bottom{
+      justify-content: center;
+    }
+
+    .content{
+      text-align: center;
+      flex-grow: 1; /* 允许自适应高度 */
+      padding-top:20px;
+    }
+  }
+
+  .leftModal{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 180px;
+    height: 100vh;
+    background-color: #454141;
+    box-shadow: 1px 1px 1px 1px #eee;
+    padding: 10px 20px;
+    
+    .name{
+      margin-top: 10px;
+    }
+
+    .moodIndex{
+      // position: relative;
+      margin-top: 10px;
+    }
+
+    .starts{
+      margin-top:10px;
+    }
+    
+
+    // 五角星
+    .fiveStart{
+      width: 20px;
+      height: 20px;
+      background-color: #f0e68c;
+      display: inline-block;
+      clip-path: polygon(
+        50% 0%, 
+        61% 35%, 
+        98% 35%, 
+        68% 57%, 
+        79% 91%, 
+        50% 70%, 
+        21% 91%, 
+        32% 57%, 
+        2% 35%, 
+        39% 35%
+      );
+    }
+
+
+
+    // // 进度条
+    // .progressBar{
+    //   width:100px;
+    //   height: 20px;
+    //   background: #fff;
+    //   // position: absolute;
+    //   // top:33px;
+    //   // left:51px;
+    // }
+  }
