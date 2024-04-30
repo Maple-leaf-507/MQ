@@ -33,8 +33,6 @@
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
-    "src/**/*.vue",
-    "src/pages/merchant/index.scss",
-    "src/subPages/login/bgImg.js"
+    "src/**/*.vue"
   ]
 }

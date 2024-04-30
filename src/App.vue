@@ -22,6 +22,7 @@ import { onMounted, nextTick,ref } from 'vue'
   }
   // let timer = ref(null)
 
+  //  玥瑶   星洛   雨桐    安潼
 /* 创建image元素 */
 let img = new Image();
 /* 设置雪花的地址（网络地址），只有雪花是用图片表示 */

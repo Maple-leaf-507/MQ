@@ -5,8 +5,8 @@
       <div @click.stop="clickLeft" :style="{transform: showModal?'translateX(180px)':'translateX(0)'}">
         <img src="@/assets/icons/moreThan.png" alt="" style="width:30px;height:30px">
       </div>
-      <div>头部内容</div>
-      <div>右边内容</div>
+      <h1>梦绮</h1>
+      <div>Maple-leaf_507</div>
     </div>
 
     <!-- 中间的内容 -->
@@ -15,7 +15,9 @@
     </div>
 
     <!-- 底部 -->
-    <div class="bottom">底部内容</div>
+    <div class="bottom">
+      人生的路，无需作过多的准备，只要你迈进，路就会在你脚下延伸，只要你扬帆，便会有八面来风。
+    </div>
 
   </div>
    
